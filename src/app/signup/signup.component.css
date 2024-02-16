@@ -1,0 +1,62 @@
+/* signup.component.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent scrolling of the background content */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px; /* Increase padding for better spacing */
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Increase box shadow for a lifted appearance */
+}
+
+.modal-content h2 {
+    color: #333;
+    font-size: 24px; /* Increase font size for the heading */
+    margin-bottom: 20px; /* Add margin to separate the heading from the form */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Increase margin between form groups */
+}
+
+label {
+    font-weight: bold;
+    display: block; /* Display labels as blocks for better spacing */
+    margin-bottom: 8px; /* Add margin below labels */
+}
+
+input.form-control {
+    width: 100%; /* Make input fields fill the container */
+    padding: 12px; /* Increase padding for better input field appearance */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn-dark,
+.btn-secondary {
+    padding: 12px;
+    font-size: 16px; /* Increase font size for buttons */
+    margin-top: 15px; /* Add margin on top of buttons */
+}
+
+.login-link {
+    font-size: 14px; /* Reduce font size for the login link */
+}
+
+.btn-dark:hover,
+.btn-secondary:hover {
+    filter: brightness(90%);
+}

@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-wrapper navbar-transparent">
+  <a class="navbar-brand" routerLink="/">FinancialXplore</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-nav ml-auto">
+      <a routerLink="/login" class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Login</a>
+      <a routerLink="/signup" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#signupModal">Join for Free</a>
+    </div>
+    
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<!-- Update your login modal HTML -->
+<div class="modal fade" id="mymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="username" name="Username" class="form-control" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn btn-dark login-btn" data-bs-dismiss="modal">Login</button>
+        </form>
+        <p class="signup-link mt-3">Don't have an account? <a routerLink="/signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></p>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+<!-- Add a new Signup Modal HTML below the Login Modal -->
+<div class="modal fade" id="signupModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Join for Free</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="signupUsername" name="signupUsername" class="form-control" id="signupUsername" placeholder="Enter your username" required>
+          </div>
+          <div class="form-group">
+            <input type="email" [(ngModel)]="signupEmail" name="signupEmail" class="form-control" id="signupEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+
+            <input type="password" [(ngModel)]="signupPassword" name="signupPassword" class="form-control" id="signupPassword" placeholder="Enter your password" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="tel" [(ngModel)]="phone" name="phone" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+          <button type="submit" class="btn btn-dark signup-btn">Sign Up</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </form>
+        <p class="login-link mt-3">Already have an account? <a routerLink="/login" data-bs-toggle="modal" data-bs-target="#mymodal"Login data-bs-dismiss="modal">Login</a></p>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

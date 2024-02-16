@@ -1,0 +1,223 @@
+/* Add these styles to your existing styles or create a new CSS file */
+
+/* Add these styles to your existing styles or create a new CSS file */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Set background color to black */
+  color: #fff; /* Set text color to white */
+}
+
+.course-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #111; /* Set background color to a dark shade */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Add a subtle white box shadow */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.enroll-btn {
+  display: block;
+  margin-top: 20px;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: #fff;
+}
+
+.enroll-btn:hover {
+  background-color: #0056b3;
+}
+
+.feedback-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #111; /* Set background color to a dark shade */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Add a subtle white box shadow */
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.comment {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #333; /* Set border color to a lighter shade */
+  border-radius: 8px;
+  background-color: #222; /* Set background color to a darker shade */
+}
+
+.comment:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Add a subtle white box shadow on hover */
+}
+
+/* Header styles */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 0;
+}
+
+/* Main styles */
+main {
+  background-color: #000;
+  padding: 30px 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.course-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.enroll-btn {
+  display: block;
+  margin-top: 20px;
+}
+
+.feedback-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.vcard img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.comment-body h3 {
+  color: #333;
+}
+
+.comment-body .meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.comment-body p {
+  line-height: 1.6;
+}
+/* Additional styles for a more visually appealing course details page */
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main styles */
+main {
+  background-color: #f8f9fa;
+  padding: 30px 0;
+}
+
+.course-details-container {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.course-details-container h3 {
+  color: #333;
+}
+
+.course-details-container p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.enroll-btn {
+  display: block;
+  margin-top: 20px;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: #fff;
+}
+
+.enroll-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Feedback styles */
+.feedback-container {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.feedback-container h3 {
+  color: #333;
+}
+
+.comment {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.vcard img {
+  border-radius: 50%;
+}
+
+.comment-body h3 {
+  color: #555;
+}
+
+.comment-body .meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.comment-body p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.comment:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}

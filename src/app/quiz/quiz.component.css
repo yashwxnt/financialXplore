@@ -1,0 +1,74 @@
+/* Add this CSS to your style file or in the <style> tag in your HTML */
+
+.container {
+    max-width: 800px;
+}
+
+.border {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.question {
+    background-color: #f8f9fa;
+}
+
+.question-title {
+    margin-bottom: 10px;
+}
+
+.ans {
+    margin-bottom: 10px;
+}
+
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio span {
+    position: relative;
+    padding-left: 30px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.radio:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: border 0.3s;
+}
+
+.radio input:checked ~ span:before {
+    background-color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Add more styles as needed for other elements in your quiz component */

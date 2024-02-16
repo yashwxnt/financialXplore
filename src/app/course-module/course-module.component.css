@@ -1,0 +1,72 @@
+/* course-module.component.css */
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0; 
+}
+
+/* Module Content Styles */
+.module-content {
+    margin: 20px;
+}
+
+.course-details {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+}
+
+.course-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block; /* Center the image within its container */
+    margin: 0 auto;
+}
+
+.course-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000; /* Adjust text color for better contrast */
+}
+
+.course-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666; /* Adjust text color for better readability */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Center the button within its container */
+    margin: 20px auto;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    color: #fff;
+}

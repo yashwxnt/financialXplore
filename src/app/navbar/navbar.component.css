@@ -1,0 +1,304 @@
+/* Your existing styles (styles.css or your stylesheet file) */
+
+body {
+  margin: 0;
+}
+.navbar {
+  padding: 9px 18px;
+  box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto; /* Move the navbar-nav to the right */
+}
+
+.nav-item {
+  margin-right: 11px; /* Reduce margin for individual navigation items */
+  font-weight: 501;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+/* Add these styles to your existing CSS */
+
+.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar-scrolled {
+  background-color: #111 !important; /* Change the background color as needed */
+  box-shadow: 0 2px 4px rgba(1, 1, 1, 0.3);
+}
+
+.sticky-wrapper {
+  position: fixed; /* Change from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.sticky-wrapper + .site-blocks-cover {
+  margin-top: 96px;
+}
+
+.sticky-wrapper .site-navbar {
+  transition: .2s all ease;
+}
+
+.sticky-wrapper .site-navbar .site-menu > li {
+  display: inline-block;
+}
+
+.sticky-wrapper .site-navbar .site-menu > li > a.active {
+  color: #fff;
+  position: relative;
+}
+
+.sticky-wrapper .site-navbar .site-menu > li > a.active:after {
+  height: 2px;
+  background: #fff;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+}
+
+.sticky-wrapper.is-sticky .site-navbar {
+  box-shadow: 4px 0 20px -5px rgba(1, 1, 1, 0.5);
+  background: #fff;
+}
+
+.sticky-wrapper.is-sticky .site-navbar .site-logo a {
+  color: #1111
+}
+
+.sticky-wrapper.is-sticky .site-navbar .site-menu > li > a {
+  padding: 5px 20px;
+  color: #1111;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover {
+  color: #7971ea;
+}
+
+.sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active:after {
+  background: #7971ea;
+}
+
+.sticky-wrapper .shrink {
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
+.form-inline {
+  display: flex; /* Set display to flex */
+  align-items: center; /* Center items vertically within the form */
+}
+
+.form-control {
+  padding: 5px; /* Reduce padding for the input */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-primary {
+  padding: 5px 15px; /* Reduce padding for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(1, 1, 1, 0.7);
+}
+/* login.component.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent scrolling of the background content */
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 30px; /* Increase padding for better spacing */
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(1, 1, 1, 0.9); /* Increase box shadow for a lifted appearance */
+}
+
+.modal-content h2 {
+  color: #ffffff;
+  font-size: 24px; /* Increase font size for the heading */
+  margin-bottom: 18px; /* Add margin to separate the heading from the form */
+}
+
+.form-group {
+  margin-bottom: 21px; /* Increase margin between form groups */
+}
+
+label {
+  font-weight: bold;
+  display: block; /* Display labels as blocks for better spacing */
+  margin-bottom: 8px; /* Add margin below labels */
+}
+
+input.form-control {
+  width: 100%; /* Make input fields fill the container */
+  padding: 12px; /* Increase padding for better input field appearance */
+  border: 1px solid #9e9b9b;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px;
+  font-size: 16px; /* Increase font size for buttons */
+  margin-top: 11px; /* Add margin on top of buttons */
+}
+
+.signup-link {
+  font-size: 14px; /* Reduce font size for the signup link */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  filter: brightness(91%);
+}
+/* Add this to your global styles or in a specific component's styles */
+.modal-content {
+  border-radius: 10px; /* Adjust as needed */
+  background-color: #4b4a4a
+}
+
+.modal-title {
+  font-size: 1.5rem; /* Adjust title font size */
+}
+
+.modal-body {
+  padding: 18px; /* Adjust padding as needed */
+}
+
+.form-group {
+  margin-bottom: 18px; /* Adjust margin as needed */
+}
+
+.login-btn {
+  width: 100%; /* Make the login button full-width */
+}
+
+.signup-link {
+  text-align: center; /* Center the signup link */
+}
+
+/* Optional: Style the close button */
+.close {
+  color: #fff; /* Close button color */
+  font-size: 1.25rem; /* Adjust font size */
+}
+
+
+.modal-header {
+  color: #ffffff; /* Text color */
+}
+
+.modal-title {
+  font-size: 1.8rem; 
+  margin-bottom: 0;
+}
+
+.modal-body {
+  padding: 18px; /* Adjust padding as needed */
+}
+
+.form-group {
+  margin-bottom: 22px; 
+}
+
+.login-btn {
+  width: 100%; /* Make the login button full-width */
+  background-color: #016fff; /* Green button color */
+  color: #fff; /* Text color */
+  border: none; /* Remove button border */
+  transition: background-color 0.2s ease; /* Add a smooth transition */
+}
+
+.login-btn:hover {
+  background-color: #5194ff; /* Darker green on hover */
+}
+
+.signup-link {
+  text-align: center; 
+  margin-top: 15px; 
+  color: #fff;
+}
+
+.close {
+  color: #ffffff; 
+  font-size: 1.0rem;
+  opacity: 0.8; 
+  transition: opacity 0.2s ease; 
+}
+
+.close:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+/* Add this to your global styles or in a specific component's styles */
+.signup-btn {
+  width: 100%; /* Make the signup button full-width */
+  background-color: #007bff; /* Blue button color */
+  color: #fff; /* Text color */
+  border: none; /* Remove button border */
+  transition: background-color 0.2s ease; /* Add a smooth transition */
+}
+
+.signup-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-link {
+  text-align: center; /* Center the login link */
+  margin-top: 15px; /* Add margin on top of the login link */  
+  color: #fff;
+}
+
+
+.close {
+  color: #181818; /* Close button color */
+  font-size: 1.0rem; /* Adjust font size */
+  opacity: 0.8; /* Slightly reduce opacity */
+  transition: opacity 0.2s ease; /* Add a smooth transition */
+}
+
+.close:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+

@@ -1,0 +1,124 @@
+<!-- manage-course.component.html -->
+<div class="container-scroller">
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+      <a class="sidebar-brand brand-logo" href="index.html"><img src=" " alt="FinanceXpolre" /></a>
+      <a class="sidebar-brand brand-logo-mini" href="index.html"><img src=" " alt="FinanceXpolre" /></a>
+    </div>
+    <ul class="nav">
+      <li class="nav-item profile">
+        <div class="profile-desc">
+          <div class="profile-pic">
+            <div class="count-indicator">
+              <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+              <span class="count bg-success"></span>
+            </div>
+            <div class="profile-name">
+              <h5 class="mb-0 font-weight-normal">Admin</h5>
+              <span>FinanceXpolrer</span>
+            </div>
+          </div>
+          <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+          <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+            <a href="#" class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-settings text-primary"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject ellipsis mb-1 text-small">Profile</p>
+              </div>
+            </a>
+            
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-calendar-today text-success"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item nav-category">
+        <span class="nav-link"> Admin Holds</span>
+      </li>
+     
+      
+      <li class="nav-item menu-items">
+        <a class="nav-link" routerLink="/admin-nav/manage-quizz">
+          <span class="menu-icon">
+            <i class="mdi mdi-playlist-play"></i>
+          </span>
+          <span class="menu-title">Manage Quizes</span>
+        </a>
+      </li>
+
+      <li class="nav-item menu-items">
+        <a class="nav-link" routerLink="/admin-nav/manage-Courses">
+          <span class="menu-icon">
+            <i class="mdi mdi-table-large"></i>
+          </span>
+          <span class="menu-title">Manage Courses </span>
+        </a>
+      </li>
+      
+  
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="#">
+          <span class="menu-icon mdi mdi-onepassword  text-info">
+            <i class="preview-icon bg-dark rounded-circle"></i>
+          </span>
+          <span class="menu-title">Logout</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+  <div class="manage-course-container">
+    <h2>Manage Course Content</h2>
+    <form [formGroup]="courseForm" (ngSubmit)="createCourse()">
+        <label for="courseName">Course Name</label>
+        <input type="text" class="form-control" id="courseName" name="courseName" [(ngModel)]="course.courseName" required>
+      
+      <div class="form-group">
+        <label for="courseDescription">Course Description</label>
+        <textarea class="form-control" id="courseDescription" name="courseDescription" [(ngModel)]="course.courseDescription" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="courseSummary">Course Summary</label>
+        <textarea class="form-control" id="courseSummary" name="courseSummary" [(ngModel)]="course.courseSummary" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="courseImageUrl">Course Image URL</label>
+        <input type="text" class="form-control" id="courseImageUrl" name="courseImageUrl" [(ngModel)]="course.courseImageUrl" required>
+      </div>
+      <div class="form-group">
+        <label for="totalQuizzes">Total Quizzes</label>
+        <input type="number" class="form-control" id="totalQuizzes" name="totalQuizzes" [(ngModel)]="course.totalQuizzes" required>
+      </div>
+      <div class="form-group">
+        <label for="courseCreatedBy">Course Created By</label>
+        <input type="text" class="form-control" id="courseCreatedBy" name="courseCreatedBy" [(ngModel)]="course.courseCreatedBy" required>
+      </div>
+      <div class="form-group">
+        <label for="courseCreatedDate">Course Created Date</label>
+        <input type="date" class="form-control" id="courseCreatedDate" name="courseCreatedDate" [(ngModel)]="course.courseCreatedDate" required>
+      </div>
+      <!-- Add dynamic fields for topics -->
+      <!-- Update the form to include file input elements -->
+        <div class="form-group" *ngFor="let topic of course.topics; let i = index">
+          <label for="topicName{{i}}">Topic Name</label>
+          <input type="text" class="form-control" id="topicName{{i}}" name="topicName{{i}}" [(ngModel)]="topic.topicName" required>
+          <label for="topicContent{{i}}">Upload PDF for Topic Content</label>
+          <input type="file" class="form-control" id="topicContent{{i}}" name="topicContent{{i}}" (change)="onFileSelected($event, i)" accept="application/pdf" required>
+        </div>
+      <button type="button" class="btn btn-primary" (click)="addTopic()">Add Topic</button>
+      <button type="submit" class="btn btn-success" [disabled]="courseForm.invalid">Create Course</button>
+    </form>
+  </div>
